@@ -1,0 +1,17 @@
+# Ignore Python virtual environment folders
+venv/
+rapids-env/
+
+# Ignore Python cache files and compiled files
+__pycache__/
+*.pyc
+
+# Ignore large data folders
+data/
+
+# Ignore IDE-specific folders (e.g., PyCharm, VSCode)
+.idea/
+.vscode/
+
+# Ignore NLTK's downloaded data folder
+nltk_data/
