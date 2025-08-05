@@ -6,8 +6,9 @@ rapids-env/
 __pycache__/
 *.pyc
 
-# Ignore large data folders
+# Ignore large data and model folders
 data/
+models/
 
 # Ignore IDE-specific folders (e.g., PyCharm, VSCode)
 .idea/
@@ -15,3 +16,6 @@ data/
 
 # Ignore NLTK's downloaded data folder
 nltk_data/
+
+#Ignore log files
+*.log
