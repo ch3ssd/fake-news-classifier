@@ -4,6 +4,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 from preprocess import clean_text, download_nltk_data
+import joblib
+import os
 
 print("Loading data...")
 download_nltk_data()
@@ -46,3 +48,21 @@ print(f"Accuracy: {accuracy:.4f}")
 print("\nClassification Report:")
 print(report)
 print("--------------------------------\n")
+
+# Define the directory to save models
+model_dir = 'models'
+# Create the directory if it doesn't exist
+os.makedirs(model_dir, exist_ok=True)
+
+# Define file paths
+model_path = os.path.join(model_dir, 'fake_news_model.joblib')
+vectorizer_path = os.path.join(model_dir, 'tfidf_vectorizer.joblib')
+
+# Save the trained model and the vectorizer to disk
+print(f"Saving model to {model_path}")
+joblib.dump(model, model_path)
+
+print(f"Saving vectorizer to {vectorizer_path}")
+joblib.dump(vectorizer, vectorizer_path)
+
+print("Model and vectorizer saved successfully.")
