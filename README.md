@@ -32,7 +32,7 @@ Follow these instructions to get the project running on your local machine.
 3.  **Create and activate a virtual environment:**
     ```bash
     # Create the environment
-    python3 -m venv venv
+    python -m venv venv
 
     # Activate it (on macOS/Linux)
     source venv/bin/activate
@@ -48,7 +48,7 @@ Follow these instructions to get the project running on your local machine.
 
 ---
 
-## ⚙️ Usage
+## Usage
 
 To train the model and see the evaluation results, run the main training script from the project's root directory:
 
