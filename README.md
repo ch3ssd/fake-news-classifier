@@ -1,8 +1,8 @@
 # Fake News Classifier 
 
-This project trains a machine learning model to classify news articles as either **"Real"** or **"Fake"** based on their title and text content.
+This project trains a machine learning model to classify news articles and deploys it as an interactive web application using Streamlit.
 
-The script uses a **Logistic Regression** model and a `TfidfVectorizer` to convert text into numerical features. The final model achieves approximately 99% accuracy on the test set.
+The script uses a **Logistic Regression** model and a `TfidfVectorizer`. The final model achieves approximately 99% accuracy on the test set.
 
 ---
 
@@ -32,7 +32,7 @@ Follow these instructions to get the project running on your local machine.
 3.  **Create and activate a virtual environment:**
     ```bash
     # Create the environment
-    python -m venv venv
+    python3 -m venv venv
 
     # Activate it (on macOS/Linux)
     source venv/bin/activate
@@ -50,7 +50,21 @@ Follow these instructions to get the project running on your local machine.
 
 ## Usage
 
-To train the model and see the evaluation results, run the main training script from the project's root directory:
+There are two main steps to use this project.
+
+### Step 1: Train the Model
+
+First, you must run the training pipeline. This script will process the data and save the trained model and vectorizer to a `models/` folder.
 
 ```bash
 python src/train.py
+```
+
+### Step 2: Run the Web Application
+
+Once the model is trained and saved, you can launch the interactive Streamlit app.
+
+```bash
+streamlit run app.py
+```
+This will open a new tab in your web browser where you can paste any news article text and get a prediction.
