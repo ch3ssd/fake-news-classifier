@@ -19,3 +19,6 @@ nltk_data/
 
 #Ignore log files
 *.log
+
+#Ignore Jupyter Notebooks
+*.ipynb
